@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:text="BIENVENUE JACK"
+            android:text="BIENVENUE JOHN"
             android:textColor="#000000"
             android:textSize="35sp"
             android:textStyle="bold" />
