@@ -1,21 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateTraining"
-    android:background="#000000">
+    android:background="#000000"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    >
 
     <TextView
-        android:id="@+id/activity_main_menu_welcome_txt"
+        android:id="@+id/activity_create_training_txt"
         android:layout_width="wrap_content"
         android:layout_height="98dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
         android:text="CRÉATION D'ENTRAINEMENT"
         android:textColor="#ffffff"
         android:textSize="35sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/activity_create_training_Entrainement_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="60dp"
+        android:text="Entraînement sans titre"
+        android:textColor="#808080"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/activity_create_training_2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="42dp"
+        android:text="Vitesse globale"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/activity_main_menu_new_training_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="136sp"
+        android:layout_height="50dp"
+        android:background="#008000"
+        android:text="Lente"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/activity_main_menu_new_training_button1"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="136sp"
+        android:layout_height="50dp"
+        android:background="#FFA500"
+        android:text="Modérée"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/activity_main_menu_new_training_button2"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="137sp"
+            android:layout_height="50dp"
+            android:background="#FF0000"
+            android:text="Rapide"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/activity_create_training_3_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Resistance globale"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="70sp">
+
+        <Button
+            android:id="@+id/activity_main_menu_new_training_button3"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="136sp"
+            android:layout_height="50dp"
+            android:background="#008000"
+            android:text="Faible"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/activity_main_menu_new_training_button4"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="136sp"
+            android:layout_height="50dp"
+            android:background="#FFA500"
+            android:text="Moyenne"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/activity_main_menu_new_training_button5"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="137sp"
+            android:layout_height="50dp"
+            android:background="#FF0000"
+            android:text="Forte"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_main_menu_new_training_button6"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="137sp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Suivant"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 </LinearLayout>
+
+

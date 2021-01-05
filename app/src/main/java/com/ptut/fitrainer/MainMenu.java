@@ -16,7 +16,7 @@ public class MainMenu extends AppCompatActivity {
     private Button newTraining;
     private Button createTraining;
     private Button history;
-    private Button stats;
+    private Button globalStats;
     private Button logout;
 
     @Override
@@ -30,7 +30,7 @@ public class MainMenu extends AppCompatActivity {
         newTraining = (Button) findViewById(R.id.activity_main_menu_new_training_button);
         createTraining = (Button) findViewById(R.id.activity_main_menu_create_training_button);
         history = (Button) findViewById(R.id.activity_main_menu_history_button);
-        stats = (Button) findViewById(R.id.activity_main_menu_stats_button);
+        globalStats = (Button) findViewById(R.id.activity_main_menu_stats_button);
         logout = (Button) findViewById(R.id.activity_main_menu_logout_button);
 
         newTraining.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +46,30 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent createTraining = new Intent(MainMenu.this, CreateTraining.class);
                 startActivity(createTraining);
+            }
+        });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent history = new Intent(MainMenu.this, History.class);
+                startActivity(history);
+            }
+        });
+
+        globalStats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent globalStats = new Intent(MainMenu.this, GlobalStats.class);
+                startActivity(globalStats);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent logout = new Intent(MainMenu.this, Connect.class);
+                startActivity(logout);
             }
         });
     }
