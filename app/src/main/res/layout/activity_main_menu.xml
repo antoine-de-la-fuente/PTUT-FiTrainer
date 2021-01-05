@@ -4,34 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="bottom"
     android:orientation="vertical"
     tools:context=".MainMenu">
 
 
         <!-- TODO: aligner le texte entre la TopBar et les boutons -->
 
-        <TextView
-            android:id="@+id/activity_main_menu_welcome_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:text="BIENVENUE ZOZI"
-            android:textColor="#000000"
-            android:textSize="35sp"
-            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/activity_main_menu_greetings_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="60sp"
-            android:text="NOUS SOMMES CONTENTS\nDE VOUS REVOIR"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="225sp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_main_menu_welcome_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/welcome_title"
+                    android:textColor="#000000"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_main_menu_greetings_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/welcome_greetings"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/activity_main_menu_new_training_button"

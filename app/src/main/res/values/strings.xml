@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FiTrainer</string>
+    <string name="welcome_title">BIENVENUE ZOZI</string>
+    <string name="welcome_greetings">NOUS SOMMES CONTENTS<br />DE VOUS REVOIR</string>
 </resources>
