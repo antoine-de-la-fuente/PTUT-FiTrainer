@@ -16,25 +16,34 @@ public class DataBase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql_user = "CREATE TABLE User(\n" +
-                "   id_user numeric,\n" +
-                "   nom text,\n" +
-                "   prenom text,\n" +
-                "   ddn numeric,\n" +
-                "   poids integer,\n" +
-                "   fc_max integer,\n" +
-                "   niveau text,\n" +
-                "   primary key(id_user)\n" +
-                ");\n";
+        String sql_user = "CREATE TABLE User(" +
+                "   id_user numeric," +
+                "   nom text," +
+                "   prenom text," +
+                "   ddn numeric," +
+                "   poids integer," +
+                "   fc_max integer," +
+                "   niveau text," +
+                "   primary key(id_user)" +
+                ");";
 
-        String sql_ = "create table Training(\n" +
-                "   id_training numeric,\n" +
-                "   nom text,\n" +
-                "   vitesse text,\n" +
-                "   resistance text,\n" +
-                "   PRIMARY KEY(id_training),\n" +
-                "   FOREIGN KEY(id_user) REFERENCES User(id_training)\n" +
-                ");\n";
+        String sql_training = "create table Training(" +
+                "   id_training numeric," +
+                "   nom text," +
+                "   vitesse text," +
+                "   resistance text," +
+                "   PRIMARY KEY(id_training)," +
+                "   FOREIGN KEY(id_user) REFERENCES User(id_training)" +
+                ");";
+
+        String sql_donnees_sec = "create table Donnees_Secondes(" +
+                "   temps_courant numeric," +
+                "   puissance integer," +
+                "   f_de_pedalage integer," +
+                "   f_cardiaque integer," +
+                "   distance integer," +
+                "   PRIMARY KEY(temps_courant)" +
+                ");";
     }
 
     @Override
