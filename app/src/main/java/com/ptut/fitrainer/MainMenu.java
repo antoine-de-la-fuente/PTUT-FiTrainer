@@ -40,5 +40,13 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(newTraining);
             }
         });
+
+        createTraining.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent createTraining = new Intent(MainMenu.this, CreateTraining.class);
+                startActivity(createTraining);
+            }
+        });
     }
 }
