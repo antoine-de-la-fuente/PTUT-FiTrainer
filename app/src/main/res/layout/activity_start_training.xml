@@ -4,26 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="bottom"
     tools:context=".NewTraining">
 
-
-
-    <TextView
-        android:id="@+id/activity_main_countdown"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="650dp"
-        android:gravity="center"
-        android:text="05:00"
-        android:textAlignment="center"
-        android:textSize="100sp" />
+        android:layout_height="80sp"
+        android:layout_marginBottom="120sp"
+        android:background="@drawable/intensity_gradient">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="150sp">
+
+        <TextView
+            android:id="@+id/activity_main_countdown2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ÉCHAUFFEMENT"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/activity_main_countdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="05:00"
+            android:textAlignment="center"
+            android:textSize="100sp" />
+
+        <TextView
+            android:id="@+id/activity_main_countdown1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TR/MIN"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/activity_main_stardButton"
+        android:id="@+id/activity_main_start_training_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryLight"
-        android:text="commencer"
-        android:textColor="@color/colorPrimary" />
+        android:layout_height="70dp"
+        android:background="#00FF00"
+        android:text="COMMENCER"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
 
 </LinearLayout>
