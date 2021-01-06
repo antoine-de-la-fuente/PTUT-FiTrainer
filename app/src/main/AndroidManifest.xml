@@ -9,11 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartTraining"></activity>
+        <activity android:name=".StartTraining" />
 
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/profile_icon" />
+        <meta-data android:name="com.google.android.actions" />
 
         <activity android:name=".Connect" />
         <activity android:name=".GlobalStats" />

@@ -2,6 +2,7 @@ package com.ptut.fitrainer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +19,14 @@ public class MainMenu extends AppCompatActivity {
     private Button history;
     private Button globalStats;
     private Button logout;
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_menu_bar, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,4 +82,5 @@ public class MainMenu extends AppCompatActivity {
             }
         });
     }
+
 }

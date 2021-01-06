@@ -2,15 +2,12 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="bottom"
     android:orientation="vertical"
     tools:context=".MainMenu">
-
-
-        <!-- TODO: aligner le texte entre la TopBar et les boutons -->
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,7 +45,7 @@
             android:layout_height="70dp"
             android:background="@color/colorAccent"
             android:text="nouvel entraînement"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryLight"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -59,7 +56,7 @@
             android:layout_height="70dp"
             android:background="#156BAA"
             android:text="création"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryLight"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -70,7 +67,7 @@
             android:layout_height="70dp"
             android:background="#0B3555"
             android:text="historique"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryLight"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -81,7 +78,7 @@
             android:layout_height="70dp"
             android:background="@color/colorPrimary"
             android:text="Statistiques globales"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryLight"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -92,7 +89,7 @@
             android:layout_height="70dp"
             android:background="#B31B10"
             android:text="déconnexion"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryLight"
             android:textSize="22sp"
             android:textStyle="bold" />
 

@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GlobalStats"
-    android:background="#20A0FF"
+    android:background="@drawable/black_blue_gradient"
     android:orientation="vertical"
+    android:gravity="bottom"
     >
 
     <LinearLayout
@@ -22,8 +23,7 @@
             android:gravity="center"
             android:text="Vous avez parcouru du chemin depuis que vous avez rejoint"
             android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/activity_stat_global_txt1"
@@ -32,10 +32,10 @@
             android:gravity="center"
             android:text="FiTrainer"
             android:textColor="#FFFFFF"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
-</LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/activity_stat_global_txt2"
@@ -43,82 +43,149 @@
         android:layout_height="40dp"
         android:layout_marginTop="50sp"
         android:gravity="center"
-        android:text="Voici vos statistiques globales :"
+        android:text="VOICI VOS STATISTIQUES GLOBALES"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/activity_stat_global_txt3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:text="Distance parcourue : km"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="300sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingRight="5sp">
 
-        <TextView
-            android:id="@+id/activity_stat_global_txt4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Vitesse moyenne : km/h"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/activity_stat_global_txt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Distance parcourue :"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/activity_stat_global_txt5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Rythme cardiaque moyen : bpm"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/activity_stat_global_txt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="Vitesse moyenne :"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/activity_stat_global_txt6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Frequence moyenne de pédalage : tr/min"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/activity_stat_global_txt5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="Rythme cardiaque moyen :"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/activity_stat_global_txt7"
+            <TextView
+                android:id="@+id/activity_stat_global_txt6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="Frequence moyenne de pédalage :"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_stat_global_txt7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="Puissance moyenne :"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Puissance moyenne : W/kg"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5sp">
+
+            <TextView
+                android:id="@+id/activity_stat_global_txt8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="km"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/activity_stat_global_txt9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="km/h"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/activity_stat_global_txt10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="bpm"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/activity_stat_global_txt11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="tr/min"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/activity_stat_global_txt12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="W/kg"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/activity_stat_global_txt8"
+        android:id="@+id/activity_stat_global_month_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50sp"
         android:layout_marginTop="80dp"
         android:gravity="center"
         android:text="Afficher les statistiques par mois"
+        android:background="none"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 </LinearLayout>
