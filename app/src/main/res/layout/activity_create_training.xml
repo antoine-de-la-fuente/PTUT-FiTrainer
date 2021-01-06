@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateTraining"
     android:background="#000000"
     android:orientation="vertical"
-    android:gravity="bottom"
-    >
+    android:gravity="bottom">
 
     <TextView
         android:id="@+id/activity_create_training_txt"
@@ -17,7 +15,7 @@
         android:layout_height="98dp"
         android:gravity="center"
         android:layout_marginTop="60dp"
-        android:text="CRÉATION D'ENTRAINEMENT"
+        android:text="@string/create_training_title"
         android:textColor="#ffffff"
         android:textSize="35sp"
         android:textStyle="bold" />
@@ -27,12 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:gravity="center"
-        android:layout_marginLeft="10sp"
+        android:layout_marginStart="10sp"
         android:layout_marginTop="60dp"
-        android:text="Entraînement sans titre"
+        android:autofillHints="@string/created_training_name"
         android:textColor="#808080"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:inputType="text"
+        android:text="@string/created_training_name"
+        android:textStyle="bold"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/activity_create_training_2_txt"
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="42dp"
-        android:text="Vitesse globale"
+        android:text="@string/created_training_speed"
         android:textColor="#ffffff"
         android:textSize="20sp"
         />
@@ -56,7 +57,7 @@
         android:layout_width="136sp"
         android:layout_height="50dp"
         android:background="#008000"
-        android:text="Lente"
+        android:text="@string/create_training_speed_slow"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -67,7 +68,7 @@
         android:layout_width="136sp"
         android:layout_height="50dp"
         android:background="#FFA500"
-        android:text="Modérée"
+        android:text="@string/create_training_speed_moderate"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -78,7 +79,7 @@
             android:layout_width="137sp"
             android:layout_height="50dp"
             android:background="#FF0000"
-            android:text="Rapide"
+            android:text="@string/create_training_speed_fast"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -92,10 +93,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:text="Resistance globale"
+        android:text="@string/create_training_resistance"
         android:textColor="#ffffff"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -109,7 +109,7 @@
             android:layout_width="136sp"
             android:layout_height="50dp"
             android:background="#008000"
-            android:text="Faible"
+            android:text="@string/create_training_resistance_low"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -120,7 +120,7 @@
             android:layout_width="136sp"
             android:layout_height="50dp"
             android:background="#FFA500"
-            android:text="Moyenne"
+            android:text="@string/create_training_resistance_medium"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -131,7 +131,7 @@
             android:layout_width="137sp"
             android:layout_height="50dp"
             android:background="#FF0000"
-            android:text="Forte"
+            android:text="@string/create_training_resistance_hard"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -145,7 +145,7 @@
         android:layout_width="137sp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:text="Suivant"
+        android:text="@string/button_next"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />

@@ -4,247 +4,501 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="bottom"
     tools:context=".NewTraining">
 
     <TextView
         android:id="@+id/activity_create_training_txt"
         android:layout_width="wrap_content"
-        android:layout_height="98dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="30sp"
         android:text="QUE VOULEZ VOUS FAIRE AUJOURD'HUI ?"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/activity_create_training_txt1"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="20sp"
-        android:text="CASUAL RIDE"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/activity_create_training_txt6"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30sp"
-            android:text="Vitesse"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/activity_create_training_txt7"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:text="Résistance"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
+            <LinearLayout
+                android:id="@+id/casual_ride_training"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_create_training_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20sp"
+                    android:gravity="center"
+                    android:text="CASUAL RIDE"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="center"
+                        android:text="Vitesse"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_easy" />
+
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Résistance"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_easy" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/activity_create_training_city_track"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_create_training_txt11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20sp"
+                    android:gravity="center"
+                    android:text="CITY TRACK"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="center"
+                        android:text="Vitesse"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_easy" />
+
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Résistance"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_medium" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/activity_create_training_countryside_ramble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_create_training_txt21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20sp"
+                    android:gravity="center"
+                    android:text="COUNTRYSIDE RAMBLE"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="center"
+                        android:text="Vitesse"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_medium" />
+
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Résistance"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_easy" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/activity_create_training_downhill_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_create_training_txt31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20sp"
+                    android:gravity="center"
+                    android:text="DOWNHILL SPEED"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="center"
+                        android:text="Vitesse"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_hard" />
+
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Résistance"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_easy" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/activity_create_training_intense_cardio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_create_training_txt41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20sp"
+                    android:gravity="center"
+                    android:text="INTENSE CARDIO"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="center"
+                        android:text="Vitesse"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_hard" />
+
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Résistance"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_medium" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/activity_create_training_mountain_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_create_training_txt51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20sp"
+                    android:gravity="center"
+                    android:text="MOUNTAIN TRIP"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="center"
+                        android:text="Vitesse"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_easy" />
+
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Résistance"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_hard" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/activity_create_training_strength_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_create_training_txt61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20sp"
+                    android:gravity="center"
+                    android:text="STRENGTH PASS"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="center"
+                        android:text="Vitesse"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_medium" />
+
+
+                    <TextView
+                        android:id="@+id/activity_create_training_txt63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Résistance"
+                        android:textColor="#808080"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginRight="40sp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_difficulty_hard" />
+
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
-        </LinearLayout>
+    </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/activity_create_training_txt2"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="20sp"
-        android:text="CITY TRACK"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/activity_create_training_txt8"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30sp"
-            android:text="Vitesse"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:id="@+id/activity_create_training_txt9"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:text="Résistance"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-    </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/activity_create_training_txt3"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="20sp"
-        android:text="COUNTRYSIDE RAMBLE"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/activity_create_training_txt10"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30sp"
-            android:text="Vitesse"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:id="@+id/activity_create_training_txt11"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:text="Résistance"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-    </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/activity_create_training_txt0"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="20sp"
-        android:text="DOWNHILL SPEED"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/activity_create_training_txt12"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30sp"
-            android:text="Vitesse"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:id="@+id/activity_create_training_txt13"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:text="Résistance"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-    </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/activity_create_training_txt4"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="20sp"
-        android:text="INTENSE CARDIO"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/activity_create_training_txt14"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30sp"
-            android:text="Vitesse"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:id="@+id/activity_create_training_txt15"
-            android:layout_width="136sp"
-            android:layout_height="30dp"
-            android:text="Résistance"
-            android:textColor="#808080"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            />
-
-    </LinearLayout>
-    </LinearLayout>
 
 </LinearLayout>

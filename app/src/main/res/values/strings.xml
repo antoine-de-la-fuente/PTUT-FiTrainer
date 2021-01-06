@@ -2,6 +2,17 @@
     <string name="app_name">FiTrainer</string>
     <string name="welcome_title">BIENVENUE ZOZI</string>
     <string name="welcome_greetings">NOUS SOMMES CONTENTS<br />DE VOUS REVOIR</string>
+    <string name="create_training_title">CRÉATION D\'ENTRAINEMENT</string>
+    <string name="created_training_name">Entraînement sans titre</string>
+    <string name="created_training_speed">Vitesse globale</string>
+    <string name="create_training_speed_slow">Lente</string>
+    <string name="create_training_speed_moderate">Modérée</string>
+    <string name="create_training_speed_fast">Rapide</string>
+    <string name="create_training_resistance">Resistance globale</string>
+    <string name="create_training_resistance_low">Faible</string>
+    <string name="create_training_resistance_medium">Moyenne</string>
+    <string name="create_training_resistance_hard">Forte</string>
+    <string name="button_next">Suivant</string>
     <string-array name="filter_choice">
         <item>ENTRAÎNEMENT</item>
         <item>DATE</item>
