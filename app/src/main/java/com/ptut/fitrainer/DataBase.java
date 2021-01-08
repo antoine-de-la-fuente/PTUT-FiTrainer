@@ -44,6 +44,34 @@ public class DataBase extends SQLiteOpenHelper {
                 "   distance integer," +
                 "   PRIMARY KEY(temps_courant)" +
                 ");";
+
+        String sql_bloc = "create table Bloc(" +
+                "   id_bloc numeric," +
+                "   nom integer," +
+                "   f_de_pedalage integer," +
+                "   intensite text," +
+                "   PRIMARY KEY(id_bloc)" +
+                ");";
+
+        String sql_composer = "create table Composer(" +
+                "   id_entrainement numeric," +
+                "   id_bloc integer," +
+                "   num_ordre integer," +
+                "   num_repetition integer," +
+                "   duree integer," +
+                "   PRIMARY KEY(id_training,id_bloc)," +
+                "   FOREIGN KEY(id_training) REFERENCES Training(id_training)," +
+                "   FOREIGN KEY(id_bloc) REFERENCES Bloc(id_bloc)" +
+                ");";
+
+        String sql_correspondre = "create table Correspondre(" +
+                "   id_training numeric," +
+                "   temps_courant integer," +
+                "   date_activite integer," +
+                "   PRIMARY KEY(id_training,temps_courant)," +
+                "   FOREIGN KEY(id_training) REFERENCES Training(id_training)," +
+                "   FOREIGN KEY(temps_courant) REFERENCES Donnees_Secondes(temps_courant)" +
+                ");";
     }
 
     @Override
