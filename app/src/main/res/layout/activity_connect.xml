@@ -1,8 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Connect">
 
+
+    <TextView
+        android:id="@+id/activity_connect_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80sp"
+        android:gravity="center"
+        android:text="FiTrainer"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/activity_connect_txt1"
+            android:layout_width="318dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="120sp"
+            android:autofillHints="Nom d'utilisateur"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Nom d'utilisateur"
+            android:textColor="#808080"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/activity_connect_txt2"
+            android:layout_width="318dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="20sp"
+            android:autofillHints="Mot de passe"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Mot de passe"
+            android:textColor="#808080"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="170sp">
+
+        <Button
+            android:layout_width="210sp"
+            android:layout_height="wrap_content"
+            android:text="CONNEXION"
+            android:background="@color/colorAccent"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:layout_width="210sp"
+            android:layout_height="wrap_content"
+            android:text="CRÉE UN COMPTE"
+            android:background="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+
+
+    </LinearLayout>
 </LinearLayout>
