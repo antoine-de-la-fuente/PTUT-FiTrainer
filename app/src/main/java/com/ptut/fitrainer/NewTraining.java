@@ -18,8 +18,8 @@ public class NewTraining extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_training);
 
-        countdown = (TextView) findViewById(R.id.activity_main_countdown);
-        startButton = (Button) findViewById(R.id.activity_main_stardButton);
+        countdown = findViewById(R.id.activity_main_countdown);
+        startButton = findViewById(R.id.activity_main_start_training_button);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
