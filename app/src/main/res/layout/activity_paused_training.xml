@@ -12,7 +12,6 @@
         android:layout_height="80sp"
         android:layout_marginBottom="120sp"
         android:background="@drawable/intensity_gradient">
-
     </LinearLayout>
 
     <LinearLayout
