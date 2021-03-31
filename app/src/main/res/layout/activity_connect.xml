@@ -63,7 +63,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/fitrainer_blue"
-                android:text="Button" />
+                android:text="Button"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button6"
