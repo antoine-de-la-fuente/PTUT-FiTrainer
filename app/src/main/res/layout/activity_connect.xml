@@ -12,13 +12,13 @@
         style="@style/Widget.AppCompat.TextView.AppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUserNameConnexion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextUserNameConnexion"
         style="@style/Widget.AppCompat.EditText.OverallStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.6" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextPasswordConnexion"
         style="@style/Widget.AppCompat.EditText.OverallStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserNameConnexion" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -53,23 +53,23 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/ButtonConnexion"
             style="@style/Widget.AppCompat.Button.Borderless.OverallStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/fitrainer_blue"
-            android:text="Button"
+            android:text="@string/connexion"
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/button16"
+            android:id="@+id/ButtonSignUp"
             style="@style/Widget.AppCompat.Button.Borderless.OverallStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/black"
-            android:text="Button"
+            android:text="@string/signUp"
             android:textColor="@color/white" />
     </LinearLayout>
 

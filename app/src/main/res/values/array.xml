@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sexe">
+        <item>--Selectionnez sexe--</item>
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+
+    <string-array name="condition">
+        <item>--Selectionnez votre condition--</item>
+        <item>Expert</item>
+        <item>Excellent</item>
+        <item>Bon</item>
+        <item>Débutant</item>
+    </string-array>
+
+</resources>

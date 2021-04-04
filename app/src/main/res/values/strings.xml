@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">FiTrainer</string>
-    <string name="welcome_title">Salut!</string>
-
+    <string name="welcome_title">BIENVENUE BRUCE</string>
+    <string name="welcome_greetings">NOUS SOMMES CONTENTS DE VOUS REVOIR</string>
+    <string name="signUp">S inscrire</string>
+    <string name="signUpInfo">Finaliser</string>
+    <string name="name">Nom</string>
+    <string name="fname">Prénom</string>
+    <string name="birth">Naissance</string>
+    <string name="weight">poids</string>
+    <string name="height">Taille</string>
+    <string name="sex">Sexe</string>
+    <string name="condition">Condition</string>
+    <string name="questions">Nous avons quelques questions vous concernant</string>
+    <string name="connexion">Connexion</string>
 </resources>
