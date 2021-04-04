@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.FiTrainer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimary">@null</item>
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,5 +12,32 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Widget.AppCompat.EditText.OverallStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">64sp</item>
+        <item name="android:layout_marginEnd">64sp</item>
+    </style>
+    <style name="Widget.AppCompat.Button.Borderless.OverallStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+    <style name="Widget.AppCompat.TextView.SubTitles" parent="Widget.AppCompat.TextView">
+        <!-- implement theme here -->
+    </style>
+    <style name="Widget.AppCompat.TextView.Labels" parent="Widget.AppCompat.TextView">
+        <!-- implement theme here -->
+    </style>
+    <style name="Widget.AppCompat.TextView.AppTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textColor">@color/fitrainer_blue</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 </resources>
