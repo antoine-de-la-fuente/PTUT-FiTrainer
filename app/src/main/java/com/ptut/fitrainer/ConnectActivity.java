@@ -10,8 +10,9 @@ public class ConnectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
+        /*
         try { this.getSupportActionBar().hide(); }
         catch (NullPointerException e){}
-
+*/
     }
 }
