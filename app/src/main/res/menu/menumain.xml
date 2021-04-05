@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_home"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:actionLayout="@layout/activity_create_account_additionnal"
+        android:icon="@drawable/ic_account_circle_black_24dp"
         android:title="home"
         app:showAsAction="always" />
 </menu>

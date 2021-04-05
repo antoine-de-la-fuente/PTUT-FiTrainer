@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 
-public class CreateTrainingActivity extends AppCompatActivity {
+public class ChoiceTrainingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_training);
+        setContentView(R.layout.activity_choice_training);
     }
 
     @Override
