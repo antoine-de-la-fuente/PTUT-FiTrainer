@@ -54,9 +54,9 @@
 
         <Button
             android:id="@+id/ButtonConnexion"
-            style="@style/Widget.AppCompat.Button.Borderless.OverallStyle"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/fitrainer_blue"
             android:text="@string/connexion"
@@ -64,7 +64,7 @@
 
         <Button
             android:id="@+id/ButtonSignUp"
-            style="@style/Widget.AppCompat.Button.Borderless.OverallStyle"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

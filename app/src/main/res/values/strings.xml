@@ -2,7 +2,7 @@
     <string name="app_name">FiTrainer</string>
     <string name="welcome_title">BIENVENUE BRUCE</string>
     <string name="welcome_greetings">NOUS SOMMES CONTENTS DE VOUS REVOIR</string>
-    <string name="signUp">S inscrire</string>
+    <string name="signUp">Créer un compte</string>
     <string name="signUpInfo">Finaliser</string>
     <string name="name">Nom</string>
     <string name="fname">Prénom</string>

@@ -40,51 +40,56 @@
 
         <Button
             android:id="@+id/activity_main_menu_new_training_button"
-            style="?android:attr/borderlessButtonStyle"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@color/fitrainer_blue"
             android:text="nouvel entraînement"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/activity_main_menu_create_training_button"
-            style="?android:attr/borderlessButtonStyle"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="#156BAA"
             android:text="création"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/activity_main_menu_history_button"
-            style="?android:attr/borderlessButtonStyle"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="#0B3555"
             android:text="historique"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/activity_main_menu_stats_button"
-            style="?android:attr/borderlessButtonStyle"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="#FFFFFF"
+            android:background="@color/black"
             android:text="Statistiques globales"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/activity_main_menu_logout_button"
-            style="?android:attr/borderlessButtonStyle"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="#B31B10"
             android:text="déconnexion"
+            android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
 
