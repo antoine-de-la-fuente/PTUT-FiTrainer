@@ -34,6 +34,12 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String SQL_CREATE_BLOCKS =
             "CREATE TABLE bloc(id INTEGER PRIMARY KEY NOT NULL, " +
                     "nom TEXT, duree INTEGER, vitesse INTEGER, intensite INTEGER);";
+    /*
+    public static final String[] SQL_FILL_BLOCKS = {
+            "INSERT INTO bloc(nom, duree, vitesse, intensite)" +
+                    "VALUES('Countryside Ramble', );"
+    };
+     */
 
     public static final String SQL_DELETE = "DROP TABLE IF EXISTS utilisateur;";
 
@@ -47,6 +53,11 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_ADMIN);
         db.execSQL(SQL_CREATE_TRAININGS);
         db.execSQL(SQL_CREATE_BLOCKS);
+        /*
+        for(int i = 0; i < SQL_FILL_TRAININGS.length; i++) {
+            db.execSQL(SQL_FILL_TRAININGS[i]);
+        }
+         */
         /*
         for(int i = 0; i < SQL_FILL_TRAININGS.length; i++) {
             db.execSQL(SQL_FILL_TRAININGS[i]);
