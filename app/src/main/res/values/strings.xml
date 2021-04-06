@@ -14,4 +14,6 @@
     <string name="questions">Nous avons quelques questions vous concernant</string>
     <string name="connexion">Connexion</string>
     <string name="newtraining">Que voulez vous faire aujourd hui?</string>
+    <string name="speed">Vitesse</string>
+    <string name="resistance">Resistance</string>
 </resources>
