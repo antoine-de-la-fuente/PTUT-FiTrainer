@@ -13,13 +13,27 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "fitrainer.db";
 
-    public static final String SQL_CREATE =
+    public static final String SQL_CREATE_USERS =
             "CREATE TABLE utilisateur(id INTEGER PRIMARY KEY NOT NULL, " +
                     "pseudo TEXT, email TEXT, motDePasse TEXT, prenom TEXT, nom TEXT, dateNaissance TEXT, " +
                     "taille INTEGER, poids INTEGER, sexe TEXT, condition TEXT);";
     public static final String SQL_CREATE_ADMIN =
             "INSERT INTO utilisateur(pseudo, email, motDePasse, prenom, nom, dateNaissance, taille, poids, sexe, condition)" +
                     "VALUES('admin', 'admin@admin.com', 'admin', 'admin', 'istrateur', '01/01/1970', 180, 80, 'Homme', 'Excellent');";
+    
+    public static final String SQL_CREATE_TRAININGS = 
+            "CREATE TABLE entrainement(id INTEGER PRIMARY KEY NOT NULL, " +
+                    "nom TEXT, temps INTEGER, vitesse INTEGER, resistance INTEGER, blocs INTEGER);";
+    /*
+    public static final String[] SQL_FILL_TRAININGS = {
+            "INSERT INTO entrainement(nom, temps, vitesse, resistance, blocs)" +
+                    "VALUES('Countryside Ramble', );"
+    };
+     */
+
+    public static final String SQL_CREATE_BLOCKS =
+            "CREATE TABLE bloc(id INTEGER PRIMARY KEY NOT NULL, " +
+                    "nom TEXT, duree INTEGER, vitesse INTEGER, intensite INTEGER);";
 
     public static final String SQL_DELETE = "DROP TABLE IF EXISTS utilisateur;";
 
@@ -29,8 +43,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SQL_CREATE);
+        db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_ADMIN);
+        db.execSQL(SQL_CREATE_TRAININGS);
+        db.execSQL(SQL_CREATE_BLOCKS);
+        /*
+        for(int i = 0; i < SQL_FILL_TRAININGS.length; i++) {
+            db.execSQL(SQL_FILL_TRAININGS[i]);
+        }
+         */
     }
 
     @Override
