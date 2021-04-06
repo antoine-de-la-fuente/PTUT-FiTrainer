@@ -30,11 +30,11 @@ public class MainMenuActivity extends AppCompatActivity {
         });
 
         Button bouton_training = (Button) findViewById(R.id.activity_main_menu_new_training_button);
-        bouton.setOnClickListener(new View.OnClickListener() {
+        bouton_training.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainMenuActivity.this, StartTrainingActivity.class);
-                startActivity(intent);
+                Intent intent_training = new Intent(MainMenuActivity.this, StartTrainingActivity.class);
+                startActivity(intent_training);
             }
         });
     }

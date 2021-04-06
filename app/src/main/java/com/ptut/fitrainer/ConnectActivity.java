@@ -47,7 +47,7 @@ public class ConnectActivity extends AppCompatActivity {
                 String query = "SELECT * FROM utilisateur WHERE pseudo = '" + pseudo.getText().toString() + "' AND motDePasse = '" + motDePasse.getText().toString() + "';";
                 Cursor curs = db.rawQuery(query, null);
 
-                if(curs.getCount() > 0) {/*
+                if(curs.getCount() <= 0) {/*
                     if(curs.moveToFirst()) {
                         do {
                             utilisateur.init(curs.getString(curs.getColumnIndexOrThrow("pseudo")),
