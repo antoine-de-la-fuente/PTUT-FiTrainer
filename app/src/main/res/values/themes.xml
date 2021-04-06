@@ -17,16 +17,23 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Widget.AppCompat.EditText.OverallStyle" parent="Widget.AppCompat.EditText">
+    <style name="EditText.OverallStyle" parent="Widget.AppCompat.EditText">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">64sp</item>
         <item name="android:layout_marginEnd">64sp</item>
     </style>
-    <style name="Widget.AppCompat.TextView.SubTitles" parent="Widget.AppCompat.TextView">
+    <style name="Button.Borderless.OverallStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextView.SubTitles" parent="Widget.AppCompat.TextView">
         <!-- implement theme here -->
     </style>
-    <style name="Widget.AppCompat.TextView.Labels" parent="Widget.AppCompat.TextView">
+    <style name="TextView.Labels" parent="Widget.AppCompat.TextView">
         <!-- implement theme here -->
     </style>
     <style name="Widget.AppCompat.TextView.AppTitle" parent="Widget.AppCompat.TextView">
@@ -35,6 +42,4 @@
         <item name="android:textSize">50sp</item>
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
-
-
 </resources>

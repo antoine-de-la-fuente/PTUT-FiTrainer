@@ -1,5 +1,8 @@
 package com.ptut.fitrainer;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 /**
  * Created by Antoine DE LA FUENTE on 4/6/21.
  */
@@ -7,6 +10,8 @@ package com.ptut.fitrainer;
 public class Utilisateur {
 
     private String pseudo;
+    private String motDePasse;
+    private String email;
     private String nom;
     private String prenom;
     private String dateNaissance;
@@ -20,9 +25,31 @@ public class Utilisateur {
     private Utilisateur() {}
     public static Utilisateur getInstance() { return instance; }
 
-    public void init(String pseudo, String nom, String prenom, String dateNaissance, int taille, int poids, String sexe, String condition) {
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public boolean isEmpty() {
+        return isEmpty;
+    }
+
+    public void init(String pseudo, String email, String motDePasse) {
+        if(isEmpty) {
+            this.pseudo = pseudo;
+            this.email = email;
+            this.motDePasse = motDePasse;
+        }
+    }
+
+    public void init(String pseudo, String email, String motDePasse, String nom, String prenom, String dateNaissance, int taille, int poids, String sexe, String condition) {
         if (isEmpty) {
             this.pseudo = pseudo;
+            this.email = email;
+            this.motDePasse = motDePasse;
             this.nom = nom;
             this.prenom = prenom;
             this.dateNaissance = dateNaissance;

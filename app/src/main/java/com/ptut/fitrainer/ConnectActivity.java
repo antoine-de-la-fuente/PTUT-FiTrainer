@@ -30,9 +30,6 @@ public class ConnectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
 
-        try { this.getSupportActionBar().hide(); }
-        catch(NullPointerException e){}
-
         pseudo      = findViewById(R.id.editTextUserNameConnexion);
         motDePasse  = findViewById(R.id.editTextPasswordConnexion);
         connexion   = findViewById(R.id.ButtonConnexion);
@@ -47,10 +44,12 @@ public class ConnectActivity extends AppCompatActivity {
                 String query = "SELECT * FROM utilisateur WHERE pseudo = '" + pseudo.getText().toString() + "' AND motDePasse = '" + motDePasse.getText().toString() + "';";
                 Cursor curs = db.rawQuery(query, null);
 
-                if(curs.getCount() <= 0) {/*
+                if(curs.getCount() > 0) {
                     if(curs.moveToFirst()) {
                         do {
                             utilisateur.init(curs.getString(curs.getColumnIndexOrThrow("pseudo")),
+                                    curs.getString(curs.getColumnIndexOrThrow("email")),
+                                    curs.getString(curs.getColumnIndexOrThrow("motDePasse")),
                                     curs.getString(curs.getColumnIndexOrThrow("nom")),
                                     curs.getString(curs.getColumnIndexOrThrow("prenom")),
                                     curs.getString(curs.getColumnIndexOrThrow("dateNaissance")),
@@ -59,7 +58,7 @@ public class ConnectActivity extends AppCompatActivity {
                                     curs.getString(curs.getColumnIndexOrThrow("sexe")),
                                     curs.getString(curs.getColumnIndexOrThrow("condition")));
                         } while(curs.moveToNext());
-                    }*/
+                    }
                     Intent intent = new Intent(ConnectActivity.this, MainMenuActivity.class);
                     startActivity(intent);
                 } else {

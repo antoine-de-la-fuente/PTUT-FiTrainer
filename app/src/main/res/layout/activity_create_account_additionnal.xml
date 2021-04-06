@@ -11,10 +11,9 @@
         style="@style/Widget.AppCompat.TextView.AppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/question"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/question"
@@ -22,13 +21,14 @@
         android:layout_height="wrap_content"
         android:text="@string/questions"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/signUpinfo"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/Button.Borderless.OverallStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#03A9F4"
@@ -60,7 +60,7 @@
             <EditText
                 android:id="@+id/editTextFName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48sp"
                 android:ems="10"
                 android:hint="Bruce"
                 android:inputType="textPersonName" />
@@ -79,7 +79,7 @@
             <EditText
                 android:id="@+id/editTextName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48sp"
                 android:ems="10"
                 android:hint="Wayne"
                 android:inputType="textPersonName" />
@@ -98,7 +98,7 @@
             <EditText
                 android:id="@+id/editTextBirth"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48sp"
                 android:ems="10"
                 android:hint="19/02/1978"
                 android:inputType="date" />
@@ -117,7 +117,7 @@
             <EditText
                 android:id="@+id/editTextHeight"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48sp"
                 android:ems="10"
                 android:hint="181 cm"
                 android:inputType="number" />
@@ -136,7 +136,7 @@
             <EditText
                 android:id="@+id/editTextWeight"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48sp"
                 android:ems="10"
                 android:hint="92 kg"
                 android:inputType="number" />
@@ -155,7 +155,7 @@
             <Spinner
                 android:id="@+id/spinnerSex"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48sp"
                 android:entries="@array/sexe" />
         </TableRow>
 
@@ -172,7 +172,7 @@
             <Spinner
                 android:id="@+id/spinnerCondition"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48sp"
                 android:entries="@array/condition" />
         </TableRow>
     </TableLayout>

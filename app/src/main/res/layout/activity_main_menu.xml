@@ -1,97 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
+    android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="bottom"
-    android:orientation="vertical"
     tools:context=".MainMenuActivity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="225sp"
-            android:gravity="center"
-            android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/activity_main_menu_welcome_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/welcome_title"
-                    android:textColor="#000000"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/activity_main_menu_welcome_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_title"
+            android:textColor="#000000"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_menu_new_training_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/activity_main_menu_greetings_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/welcome_greetings"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/activity_main_menu_greetings_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_greetings"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_main_menu_welcome_txt" />
 
-        </LinearLayout>
 
         <Button
             android:id="@+id/activity_main_menu_new_training_button"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:background="@color/fitrainer_blue"
+            android:padding="16sp"
             android:text="nouvel entraînement"
             android:textColor="@color/white"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_menu_create_training_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/activity_main_menu_create_training_button"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:background="#156BAA"
+            android:padding="16sp"
             android:text="création"
             android:textColor="@color/white"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_menu_history_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/activity_main_menu_history_button"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:background="#0B3555"
+            android:padding="16sp"
             android:text="historique"
             android:textColor="@color/white"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_menu_stats_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/activity_main_menu_stats_button"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:background="@color/black"
+            android:padding="16sp"
             android:text="Statistiques globales"
             android:textColor="@color/white"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/activity_main_menu_logout_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/activity_main_menu_logout_button"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:background="#B31B10"
+            android:padding="16sp"
             android:text="déconnexion"
             android:textColor="@color/white"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
