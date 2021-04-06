@@ -22,4 +22,7 @@
     <string name="pause">Pause</string>
     <string name="stop">Stop</string>
     <string name="resume">Reprendre</string>
+    <string name="finish">Vous avez terminé l entrainement</string>
+    <string name="finishPity">Vous n avez pas terminé l entrainement</string>
+    <string name="tryAgain">La prochaine foid c est la bonne !!</string>
 </resources>
