@@ -16,4 +16,7 @@
     <string name="newtraining">Que voulez vous faire aujourd hui?</string>
     <string name="speed">Vitesse</string>
     <string name="resistance">Resistance</string>
+    <string name="moduletime">00:00</string>
+    <string name="moduletrmin">60 TR/MIN</string>
+    <string name="commencer">Commencer</string>
 </resources>

@@ -28,6 +28,15 @@ public class MainMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button bouton_training = (Button) findViewById(R.id.activity_main_menu_new_training_button);
+        bouton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenuActivity.this, StartTrainingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
