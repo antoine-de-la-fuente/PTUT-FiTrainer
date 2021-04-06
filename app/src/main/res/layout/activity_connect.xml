@@ -19,7 +19,7 @@
 
     <EditText
         android:id="@+id/editTextUserNameConnexion"
-        style="@style/Widget.AppCompat.EditText.OverallStyle"
+        style="@style/EditText.OverallStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -33,7 +33,7 @@
 
     <EditText
         android:id="@+id/editTextPasswordConnexion"
-        style="@style/Widget.AppCompat.EditText.OverallStyle"
+        style="@style/EditText.OverallStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -54,7 +54,7 @@
 
         <Button
             android:id="@+id/ButtonConnexion"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/Button.Borderless.OverallStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -64,7 +64,7 @@
 
         <Button
             android:id="@+id/ButtonSignUp"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/Button.Borderless.OverallStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
