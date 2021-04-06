@@ -55,7 +55,8 @@
                 android:id="@+id/signup_fname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fname" />
+                android:text="@string/fname"
+                android:textAlignment="viewEnd" />
 
             <EditText
                 android:id="@+id/editTextFName"
@@ -74,7 +75,8 @@
                 android:id="@+id/signup_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/name" />
+                android:text="@string/name"
+                android:textAlignment="viewEnd" />
 
             <EditText
                 android:id="@+id/editTextName"
@@ -93,7 +95,8 @@
                 android:id="@+id/birth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/birth" />
+                android:text="@string/birth"
+                android:textAlignment="viewEnd" />
 
             <EditText
                 android:id="@+id/editTextBirth"
@@ -112,7 +115,8 @@
                 android:id="@+id/height"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/height" />
+                android:text="@string/height"
+                android:textAlignment="viewEnd" />
 
             <EditText
                 android:id="@+id/editTextHeight"
@@ -131,7 +135,8 @@
                 android:id="@+id/weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/weight" />
+                android:text="@string/weight"
+                android:textAlignment="viewEnd" />
 
             <EditText
                 android:id="@+id/editTextWeight"
@@ -150,7 +155,8 @@
                 android:id="@+id/sex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sex" />
+                android:text="@string/sex"
+                android:textAlignment="viewEnd" />
 
             <Spinner
                 android:id="@+id/spinnerSex"
@@ -167,7 +173,8 @@
                 android:id="@+id/condition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/condition" />
+                android:text="@string/condition"
+                android:textAlignment="viewEnd" />
 
             <Spinner
                 android:id="@+id/spinnerCondition"

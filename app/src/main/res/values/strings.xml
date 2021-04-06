@@ -19,4 +19,7 @@
     <string name="moduletime">00:00</string>
     <string name="moduletrmin">60 TR/MIN</string>
     <string name="commencer">Commencer</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="resume">Reprendre</string>
 </resources>

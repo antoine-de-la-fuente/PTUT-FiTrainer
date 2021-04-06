@@ -4,13 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartTrainingActivity">
-
-
-
+    tools:context=".TrainingFinalActivity">
 
     <Button
-        android:id="@+id/imageViewGradient"
+        android:id="@+id/imageViewGradientfinal"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:visibility="visible"
@@ -23,21 +20,21 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/modulename"
+        android:id="@+id/modulenamefinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Module"
+        android:text="TextView"
         android:textColor="#000000"
         android:textSize="24sp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewGradient"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewGradientfinal"
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
-        android:id="@+id/moduletime"
+        android:id="@+id/moduletimefinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/moduletime"
@@ -47,11 +44,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modulename"
+        app:layout_constraintTop_toBottomOf="@+id/modulenamefinal"
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
-        android:id="@+id/moduletrmin"
+        android:id="@+id/moduletrminfinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/moduletrmin"
@@ -61,17 +58,60 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moduletime"
+        app:layout_constraintTop_toBottomOf="@+id/moduletimefinal"
         app:layout_constraintVertical_bias="0.0"/>
 
     <Button
-        android:id="@+id/button_start"
-        style="@style/Button.Borderless.OverallStyle"
+        android:id="@+id/buttonplusfinal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_add_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewGradientfinal" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/green"
-        android:text="@string/commencer"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewfinal">
+
+
+        <Button
+            android:id="@+id/buttonpause"
+            style="@style/Button.Borderless.OverallStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#3FEF46"
+            android:text="@string/resume" />
+
+        <Button
+            android:id="@+id/buttonstop"
+            style="@style/Button.Borderless.OverallStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#F44336"
+            android:text="@string/stop" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewfinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:paddingBottom="45dp"
+        android:text="EXERCICE FINAL"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,6 +57,8 @@ public class CreateAccountActivity extends AppCompatActivity {
                         Intent intent = new Intent(CreateAccountActivity.this, CreateAccountAdditionnal.class);
                         startActivity(intent);
                         curs.close();
+                    }else{
+                        Toast.makeText(CreateAccountActivity.this, "Nom d'utilisateur deja utilisé", Toast.LENGTH_SHORT).show();
                     }
                     curs.close();
                 } else {

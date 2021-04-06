@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sexe">
-        <item>--Selectionnez sexe--</item>
+        <item>  </item>
         <item>Homme</item>
         <item>Femme</item>
     </string-array>
 
     <string-array name="condition">
-        <item>--Selectionnez votre condition--</item>
+        <item>  </item>
         <item>Expert</item>
         <item>Excellent</item>
         <item>Bon</item>
