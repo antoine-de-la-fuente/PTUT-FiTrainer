@@ -17,7 +17,9 @@ public class DBHelper extends SQLiteOpenHelper {
             "CREATE TABLE utilisateur(id INTEGER PRIMARY KEY NOT NULL, " +
                     "pseudo TEXT, email TEXT, motDePasse TEXT, prenom TEXT, nom TEXT, dateNaissance TEXT, " +
                     "taille INTEGER, poids INTEGER, sexe TEXT, condition TEXT);";
-    public static final String SQL_CREATE_ADMIN = "INSERT INTO utilisateur(pseudo, email, motDePasse, prenom, nom, dateNaissance, taille, poids, sexe, condition) VALUES('admin', 'admin@admin.com', 'admin', 'istrateur', '01/01/1970', 180, 80, 'Homme', 'Excellent');";
+    public static final String SQL_CREATE_ADMIN =
+            "INSERT INTO utilisateur(pseudo, email, motDePasse, prenom, nom, dateNaissance, taille, poids, sexe, condition)" +
+                    "VALUES('admin', 'admin@admin.com', 'admin', 'admin', 'istrateur', '01/01/1970', 180, 80, 'Homme', 'Excellent');";
 
     public static final String SQL_DELETE = "DROP TABLE IF EXISTS utilisateur;";
 

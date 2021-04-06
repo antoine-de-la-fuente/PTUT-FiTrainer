@@ -40,6 +40,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         bdd = new DBHelper(this);
         db  = bdd.getWritableDatabase();
 
+        utilisateur.delete();
+
         creerCompte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

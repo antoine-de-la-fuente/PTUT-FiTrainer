@@ -50,7 +50,7 @@ public class CreateAccountAdditionnal extends AppCompatActivity {
         creerCompte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // if((!prenom.getText().toString().isEmpty() || !nom.getText().toString().isEmpty() || !dateNaissance.getText().toString().isEmpty() || !taille.getText().toString().isEmpty() || poids.getText().toString().isEmpty()) && (sexe.getSelectedItemPosition() != 0 || condition.getSelectedItemPosition() != 0)) {
+                if((!prenom.getText().toString().isEmpty() || !nom.getText().toString().isEmpty() || !dateNaissance.getText().toString().isEmpty() || !taille.getText().toString().isEmpty() || poids.getText().toString().isEmpty()) && (sexe.getSelectedItemPosition() != 0 || condition.getSelectedItemPosition() != 0)) {
                     utilisateur.init(utilisateur.getPseudo(), utilisateur.getEmail(), utilisateur.getMotDePasse(),
                             nom.getText().toString(), prenom.getText().toString(), dateNaissance.getText().toString(),
                             Integer.parseInt(taille.getText().toString()), Integer.parseInt(poids.getText().toString()),
@@ -66,13 +66,13 @@ public class CreateAccountAdditionnal extends AppCompatActivity {
                     values.put("poids", utilisateur.getPoids());
                     values.put("sexe", utilisateur.getSexe());
                     values.put("condition", utilisateur.getCondition());
-                    db.insert("fitrainer", null, values);
+                    db.insert("utilisateur", null, values);
                     Log.i("test", utilisateur.getCondition());
-                 //   Intent intent = new Intent(CreateAccountAdditionnal.this, MainMenuActivity.class);
-                   // startActivity(intent);
-              //  } else {
+                    Intent intent = new Intent(CreateAccountAdditionnal.this, MainMenuActivity.class);
+                    startActivity(intent);
+                } else {
                     Toast.makeText(CreateAccountAdditionnal.this, "Veuillez remplir tout les champs correctement", Toast.LENGTH_SHORT).show();
-              //}
+                }
             }
         });
     }
