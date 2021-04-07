@@ -5,20 +5,23 @@ package com.ptut.fitrainer;
  */
 
 public class Bloc {
+
+    private int id;
     private String nom;
     private int duree;
     private int vitesse;
     private int intensite;
-    private boolean isEmpty = true;
 
-    public Bloc(String nom, int duree, int vitesse, int intensite) {
-        if(isEmpty) {
-            this.nom = nom;
-            this.duree = duree;
-            this.vitesse = vitesse;
-            this.intensite = intensite;
-            this.isEmpty = false;
-        }
+    public Bloc(int id, String nom, int duree, int vitesse, int intensite) {
+        this.id = id;
+        this.nom = nom;
+        this.duree = duree;
+        this.vitesse = vitesse;
+        this.intensite = intensite;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getNom() {

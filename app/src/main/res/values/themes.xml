@@ -30,8 +30,8 @@
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:textColor">@color/white</item>
     </style>
-    <style name="TextView.SubTitles" parent="Widget.AppCompat.TextView">
-        <!-- implement theme here -->
+    <style name="TextView.Title" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">true</item>
     </style>
     <style name="TextView.Labels" parent="Widget.AppCompat.TextView">
         <!-- implement theme here -->

@@ -9,23 +9,33 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.UUID;
 
 public class MainMenuActivity extends AppCompatActivity {
+
+    private Utilisateur utilisateur = Utilisateur.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        Button bouton = (Button) findViewById(R.id.activity_main_menu_logout_button);
-        bouton.setOnClickListener(new View.OnClickListener() {
+        TextView welcome = (TextView)findViewById(R.id.activity_main_menu_welcome_txt);
+        welcome.setText("Bienvenue " + utilisateur.getPrenom());
+
+        Button deconnexion = (Button) findViewById(R.id.activity_main_menu_logout_button);
+        deconnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                utilisateur.delete();
                 Intent intent = new Intent(MainMenuActivity.this, ConnectActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

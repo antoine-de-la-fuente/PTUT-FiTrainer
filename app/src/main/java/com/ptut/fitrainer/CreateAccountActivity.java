@@ -31,6 +31,9 @@ public class CreateAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        try { this.getSupportActionBar().hide(); }
+        catch(NullPointerException e){}
+
         pseudo = (EditText)findViewById(R.id.editTextUserName);
         email = (EditText)findViewById(R.id.editTextEmail);
         motDePasse  = (EditText)findViewById(R.id.editTextPassword);

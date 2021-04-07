@@ -30,6 +30,9 @@ public class ConnectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
 
+        try { this.getSupportActionBar().hide(); }
+        catch(NullPointerException e){}
+
         pseudo      = findViewById(R.id.editTextUserNameConnexion);
         motDePasse  = findViewById(R.id.editTextPasswordConnexion);
         connexion   = findViewById(R.id.ButtonConnexion);
@@ -61,6 +64,7 @@ public class ConnectActivity extends AppCompatActivity {
                     }
                     Intent intent = new Intent(ConnectActivity.this, MainMenuActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(ConnectActivity.this, "Utilisateur non existant", Toast.LENGTH_SHORT).show();
                 }

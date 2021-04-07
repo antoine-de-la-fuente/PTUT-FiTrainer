@@ -34,6 +34,9 @@ public class CreateAccountAdditionnal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account_additionnal);
 
+        try { this.getSupportActionBar().hide(); }
+        catch(NullPointerException e){}
+
         prenom = (EditText)findViewById(R.id.editTextFName);
         nom = (EditText)findViewById(R.id.editTextName);
         dateNaissance  = (EditText)findViewById(R.id.editTextBirth);
@@ -70,6 +73,7 @@ public class CreateAccountAdditionnal extends AppCompatActivity {
                     Log.i("test", utilisateur.getCondition());
                     Intent intent = new Intent(CreateAccountAdditionnal.this, MainMenuActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(CreateAccountAdditionnal.this, "Veuillez remplir tout les champs correctement", Toast.LENGTH_SHORT).show();
                 }

@@ -1,6 +1,10 @@
 package com.ptut.fitrainer;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Created by Antoine DE LA FUENTE on 4/7/21.
@@ -13,30 +17,37 @@ public class Entrainement {
     private int vitesse;
     private int resistance;
     private ArrayList<Bloc> blocs;
-    private boolean isEmpty = true;
 
-    private static Entrainement instance = new Entrainement();
-    private Entrainement() {}
-    public static Entrainement getInstance() { return instance; }
+    private SQLiteDatabase db;
 
-    public void init(String nom, int temps, int vitesse, int resistance, ArrayList<Bloc> blocs) {
-        if (isEmpty) {
-            this.nom = nom;
-            this.temps = temps;
-            this.vitesse = vitesse;
-            this.resistance = resistance;
-            this.blocs = blocs;
-            this.isEmpty = false;
-        }
+    public Entrainement(String nom, int temps, int vitesse, int resistance, String listeIDs, SQLiteDatabase db) {
+        this.nom = nom;
+        this.temps = temps;
+        this.vitesse = vitesse;
+        this.resistance = resistance;
+        this.db = db;
+        this.blocs = new ArrayList<>();
+        initBlocs(listeIDs);
     }
 
-    public void delete() {
-        this.nom = "";
-        this.temps = 0;
-        this.vitesse = 0;
-        this.resistance = 0;
-        this.blocs.clear();
-        this.isEmpty = true;
+    public void initBlocs(String listeIDs) {
+        String query = "SELECT * FROM bloc;";
+        Cursor curs = db.rawQuery(query, null);
+
+        String[] str = listeIDs.split(" ");
+        for(int i = 1; i < listeIDs.length() - 1; i++) {
+            if(curs.moveToFirst()) {
+                do {
+                    if(Integer.parseInt(str[i - 1]) == curs.getInt(curs.getColumnIndexOrThrow("id"))) {
+                        blocs.add(new Bloc(curs.getInt(curs.getColumnIndexOrThrow("id")),
+                                curs.getString(curs.getColumnIndexOrThrow("nom")),
+                                curs.getInt(curs.getColumnIndexOrThrow("duree")),
+                                curs.getInt(curs.getColumnIndexOrThrow("vitesse")),
+                                curs.getInt(curs.getColumnIndexOrThrow("intensite"))));
+                    }
+                } while(curs.moveToNext());
+            }
+        }
     }
 
     public String getNom() {
