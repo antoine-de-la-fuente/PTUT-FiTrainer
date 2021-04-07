@@ -2,13 +2,50 @@ package com.ptut.fitrainer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class StartTrainingActivity extends AppCompatActivity {
+
+    private Entrainement entrainement;
+    private ArrayList<Bloc> blocs;
+    private TextView bloc;
+    private TextView timer;
+    private TextView toursMinute;
+    private Button commencer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_training);
+
+        entrainement = getIntent().getParcelableExtra("entrainement");
+        blocs = getIntent().getParcelableArrayListExtra("blocs");
+
+        bloc = (TextView)findViewById(R.id.modulename);
+        timer = (TextView)findViewById(R.id.moduletime);
+        toursMinute = (TextView)findViewById(R.id.moduletrmin);
+
+        commencer = (Button)findViewById(R.id.button_start);
+
+        bloc.setText(blocs.get(0).getNom());
+        timer.setText(blocs.get(0).getDuree() + ":00");
+        toursMinute.setText(blocs.get(0).getVitesse() + " tr/min");
+
+        commencer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartTrainingActivity.this, TrainingBeginActivity.class);
+                intent.putExtra("entrainement", entrainement);
+                intent.putExtra("blocs", blocs);
+                startActivity(intent);
+            }
+        });
     }
 }

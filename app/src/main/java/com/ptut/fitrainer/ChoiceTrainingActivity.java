@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -45,6 +46,11 @@ public class ChoiceTrainingActivity extends AppCompatActivity {
             } while(curs.moveToNext());
         }
 
+        for (int i = 0; i < listeEntrainements.size(); i++) {
+            Log.i("test: nom entraînement", listeEntrainements.get(i).getNom());
+            Log.i("test: nombre de blocs", listeEntrainements.get(i).getBlocs().size() + "");
+        }
+
         this.adapter = new ListViewAdapterCustom(this, this.listeEntrainements);
 
         ListView listview = findViewById(R.id.listviewchoice);
@@ -55,6 +61,7 @@ public class ChoiceTrainingActivity extends AppCompatActivity {
             public void onItemClick(AdapterView parent, View v, int position, long id) {
                 Intent intent = new Intent(ChoiceTrainingActivity.this,StartTrainingActivity.class);
                 intent.putExtra("entrainement", listeEntrainements.get(position));
+                intent.putExtra("blocs", listeEntrainements.get(position).getBlocs());
                 startActivity(intent);
             }
         });

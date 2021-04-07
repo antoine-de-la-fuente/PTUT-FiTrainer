@@ -51,23 +51,22 @@ public class Entrainement implements Parcelable {
         }
     };
 
-    public void initBlocs(String listeIDs) {
+    private void initBlocs(String listeIDs) {
         String query = "SELECT * FROM bloc;";
         Cursor curs = db.rawQuery(query, null);
 
         String[] str = listeIDs.split(" ");
-        for (String id : str) {
+        for(String id : str) {
             if(curs.moveToFirst()) {
                 do {
                     if(Integer.parseInt(id) == curs.getInt(curs.getColumnIndexOrThrow("id"))) {
-                        blocs.add(new Bloc(curs.getInt(curs.getColumnIndexOrThrow("id")),
-                                curs.getString(curs.getColumnIndexOrThrow("nom")),
-                                curs.getInt(curs.getColumnIndexOrThrow("duree")),
-                                curs.getInt(curs.getColumnIndexOrThrow("vitesse")),
-                                curs.getInt(curs.getColumnIndexOrThrow("intensite"))));
+                        blocs.add(new Bloc(curs.getInt   (curs.getColumnIndexOrThrow("id")),
+                                           curs.getString(curs.getColumnIndexOrThrow("nom")),
+                                           curs.getInt   (curs.getColumnIndexOrThrow("duree")),
+                                           curs.getInt   (curs.getColumnIndexOrThrow("vitesse")),
+                                           curs.getInt   (curs.getColumnIndexOrThrow("intensite"))));
                     }
                 } while(curs.moveToNext());
-
             }
         }
     }
