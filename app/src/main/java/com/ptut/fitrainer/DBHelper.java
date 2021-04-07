@@ -23,23 +23,34 @@ public class DBHelper extends SQLiteOpenHelper {
     
     public static final String SQL_CREATE_TRAININGS = 
             "CREATE TABLE entrainement(id INTEGER PRIMARY KEY NOT NULL, " +
-                    "nom TEXT, temps INTEGER, vitesse INTEGER, resistance INTEGER, blocs INTEGER);";
-    /*
+                    "nom TEXT, temps INTEGER, vitesse INTEGER, resistance INTEGER, blocs TEXT);";
+
+
     public static final String[] SQL_FILL_TRAININGS = {
             "INSERT INTO entrainement(nom, temps, vitesse, resistance, blocs)" +
-                    "VALUES('Countryside Ramble', );"
+                    "VALUES('Countryside Ramble', 25, 2, 1, '2:3:4');",
+            "INSERT INTO entrainement(nom, temps, vitesse, resistance, blocs)" +
+                    "VALUES('Downhill Speed', 40, 3, 1, '2:3:5:3');"
     };
-     */
+
 
     public static final String SQL_CREATE_BLOCKS =
             "CREATE TABLE bloc(id INTEGER PRIMARY KEY NOT NULL, " +
                     "nom TEXT, duree INTEGER, vitesse INTEGER, intensite INTEGER);";
-    /*
+
     public static final String[] SQL_FILL_BLOCKS = {
-            "INSERT INTO bloc(nom, duree, vitesse, intensite)" +
-                    "VALUES('Countryside Ramble', );"
+            "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
+                    "VALUES(1, 'Sprint', 5, 120, 85);",
+            "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
+                    "VALUES(2, 'Echauffement', 10, 60, 30);",
+            "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
+                    "VALUES(3, 'côte', 20, 50, 90);",
+            "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
+                    "VALUES(4, 'décrassage', 25, 70, 40);",
+            "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
+                    "VALUES(5, 'repos', 1, 30, 10);"
     };
-     */
+
 
     public static final String SQL_DELETE = "DROP TABLE IF EXISTS utilisateur;";
 
@@ -53,16 +64,15 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_ADMIN);
         db.execSQL(SQL_CREATE_TRAININGS);
         db.execSQL(SQL_CREATE_BLOCKS);
-        /*
+
+        for(int i = 0; i < SQL_FILL_BLOCKS.length; i++) {
+            db.execSQL(SQL_FILL_BLOCKS[i]);
+        }
+
         for(int i = 0; i < SQL_FILL_TRAININGS.length; i++) {
             db.execSQL(SQL_FILL_TRAININGS[i]);
         }
-         */
-        /*
-        for(int i = 0; i < SQL_FILL_TRAININGS.length; i++) {
-            db.execSQL(SQL_FILL_TRAININGS[i]);
-        }
-         */
+
     }
 
     @Override
