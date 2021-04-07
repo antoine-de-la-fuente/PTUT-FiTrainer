@@ -28,9 +28,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public static final String[] SQL_FILL_TRAININGS = {
             "INSERT INTO entrainement(nom, temps, vitesse, resistance, blocs)" +
-                    "VALUES('Countryside Ramble', 25, 2, 1, '2:3:4');",
+                    "VALUES('Countryside Ramble', 25, 2, 1, '2 3 4');",
             "INSERT INTO entrainement(nom, temps, vitesse, resistance, blocs)" +
-                    "VALUES('Downhill Speed', 40, 3, 1, '2:3:5:3');"
+                    "VALUES('Downhill Speed', 40, 3, 1, '2 3 5 3');"
     };
 
 

@@ -33,7 +33,7 @@ public class MainMenuActivity extends AppCompatActivity {
         bouton_training.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_training = new Intent(MainMenuActivity.this, StartTrainingActivity.class);
+                Intent intent_training = new Intent(MainMenuActivity.this, ChoiceTrainingActivity.class);
                 startActivity(intent_training);
             }
         });

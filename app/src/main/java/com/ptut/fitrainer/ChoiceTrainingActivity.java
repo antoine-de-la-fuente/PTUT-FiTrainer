@@ -22,11 +22,13 @@ public class ChoiceTrainingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice_training);
 
-        this.entrainement = this.dbhelper.ARENSEIGNER();
+        /*this.entrainement = this.dbhelper.ARENSEIGNER();
         this.adapter = new ListViewAdapterCustom(this, this.entrainement);
 
         ListView listview = findViewById(R.id.listviewchoice);
         listview.setAdapter(this.adapter);
+        */
+
     }
 
     @Override
