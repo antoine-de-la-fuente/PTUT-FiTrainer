@@ -79,7 +79,7 @@
 
 
         <Button
-            android:id="@+id/buttonpause"
+            android:id="@+id/buttonplaypause"
             style="@style/Button.Borderless.OverallStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
