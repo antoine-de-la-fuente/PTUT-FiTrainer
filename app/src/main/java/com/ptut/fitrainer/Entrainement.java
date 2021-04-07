@@ -35,10 +35,10 @@ public class Entrainement {
         Cursor curs = db.rawQuery(query, null);
 
         String[] str = listeIDs.split(" ");
-        for(int i = 1; i < listeIDs.length() - 1; i++) {
+        for (String id : str) {
             if(curs.moveToFirst()) {
                 do {
-                    if(Integer.parseInt(str[i - 1]) == curs.getInt(curs.getColumnIndexOrThrow("id"))) {
+                    if(Integer.parseInt(id) == curs.getInt(curs.getColumnIndexOrThrow("id"))) {
                         blocs.add(new Bloc(curs.getInt(curs.getColumnIndexOrThrow("id")),
                                 curs.getString(curs.getColumnIndexOrThrow("nom")),
                                 curs.getInt(curs.getColumnIndexOrThrow("duree")),
@@ -46,6 +46,7 @@ public class Entrainement {
                                 curs.getInt(curs.getColumnIndexOrThrow("intensite"))));
                     }
                 } while(curs.moveToNext());
+
             }
         }
     }
