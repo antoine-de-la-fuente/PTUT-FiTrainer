@@ -2,11 +2,14 @@ package com.ptut.fitrainer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -46,6 +49,15 @@ public class ChoiceTrainingActivity extends AppCompatActivity {
 
         ListView listview = findViewById(R.id.listviewchoice);
         listview.setAdapter(this.adapter);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView parent, View v, int position, long id) {
+                Intent intent = new Intent(ChoiceTrainingActivity.this,StartTrainingActivity.class);
+                intent.putExtra("entrainement", listeEntrainements.get(position));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -54,4 +66,6 @@ public class ChoiceTrainingActivity extends AppCompatActivity {
         inflaterMenu.inflate(R.menu.menu, menu);
         return true;
     }
+
+
 }

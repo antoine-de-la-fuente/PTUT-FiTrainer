@@ -2,6 +2,8 @@ package com.ptut.fitrainer;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,7 +12,7 @@ import java.util.Scanner;
  * Created by Antoine DE LA FUENTE on 4/7/21.
  */
 
-public class Entrainement {
+public class Entrainement implements Parcelable {
 
     private String nom;
     private int temps;
@@ -29,6 +31,25 @@ public class Entrainement {
         this.blocs = new ArrayList<>();
         initBlocs(listeIDs);
     }
+
+    protected Entrainement(Parcel in) {
+        nom = in.readString();
+        temps = in.readInt();
+        vitesse = in.readInt();
+        resistance = in.readInt();
+    }
+
+    public static final Creator<Entrainement> CREATOR = new Creator<Entrainement>() {
+        @Override
+        public Entrainement createFromParcel(Parcel in) {
+            return new Entrainement(in);
+        }
+
+        @Override
+        public Entrainement[] newArray(int size) {
+            return new Entrainement[size];
+        }
+    };
 
     public void initBlocs(String listeIDs) {
         String query = "SELECT * FROM bloc;";
@@ -69,5 +90,18 @@ public class Entrainement {
 
     public ArrayList<Bloc> getBlocs() {
         return blocs;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(nom);
+        dest.writeInt(temps);
+        dest.writeInt(vitesse);
+        dest.writeInt(resistance);
     }
 }
