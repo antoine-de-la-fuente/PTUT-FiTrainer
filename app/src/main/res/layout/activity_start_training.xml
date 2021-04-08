@@ -7,20 +7,15 @@
     tools:context=".StartTrainingActivity">
 
 
-
-
-    <Button
-        android:id="@+id/imageViewGradient"
+    <SeekBar
+        android:id="@+id/intensitySlider2"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:visibility="visible"
-        android:background="@drawable/intensity_gradient"
+        android:layout_height="50sp"
+        android:max="100"
+        android:progressDrawable="@drawable/intensity_gradient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@android:drawable/ic_menu_add"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/modulename"
@@ -33,9 +28,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/moduletime"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageViewGradient"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/moduletime"
@@ -47,7 +40,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewGradient" />
+        app:layout_constraintTop_toBottomOf="@+id/intensitySlider2" />
 
     <TextView
         android:id="@+id/moduletrmin"

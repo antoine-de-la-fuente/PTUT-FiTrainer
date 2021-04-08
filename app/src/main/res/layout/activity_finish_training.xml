@@ -27,20 +27,37 @@
         android:id="@+id/textViewfinish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/finish"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="30dp"
+        android:text="@string/finish"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewFelicitations"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/textViewfinish2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="La prochaine fois c'est la bonne !"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewfinishtraining" />
+
+    <TextView
         android:id="@+id/textViewfinishtraining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-black"
         android:text="training"
@@ -49,6 +66,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewfinish"
         app:layout_constraintVertical_bias="0.0" />
@@ -66,13 +84,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6">
+        app:layout_constraintTop_toBottomOf="@+id/textViewFelicitations">
 
         <TableRow
             android:layout_width="match_parent"
@@ -126,6 +144,7 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
         </TableRow>
+
         <TableRow
 
             android:layout_width="match_parent"
@@ -152,6 +171,7 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
         </TableRow>
+
         <TableRow
 
             android:layout_width="match_parent"
