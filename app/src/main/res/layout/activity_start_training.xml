@@ -68,7 +68,7 @@
         android:id="@+id/button_start"
         style="@style/Button.Borderless.OverallStyle"
         android:layout_width="match_parent"
-        android:layout_height="120sp"
+        android:layout_height="96sp"
         android:background="@color/green"
         android:text="@string/commencer"
         app:layout_constraintBottom_toBottomOf="parent"

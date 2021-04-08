@@ -35,7 +35,10 @@ public class TrainingBeginActivity extends AppCompatActivity {
 
         entrainement = getIntent().getParcelableExtra("entrainement");
         blocs = getIntent().getParcelableArrayListExtra("blocs");
-        CountDownTimer bloc = new CountDownTimer(blocs.get(0).getDuree() * 60000, 1000) {
+
+        int[] i = {0};
+        /*
+        CountDownTimer bloc = new CountDownTimer(blocs.get(i).getDuree() * 60000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 int minutes = ((int) millisUntilFinished / 1000) / 60;
@@ -45,20 +48,40 @@ public class TrainingBeginActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-
+                this.start();
             }
-        };
-        bloc.start();
-        for (int i = 0; i < blocs.size(); i++) {
+        }.start();
+         */
+        nomBloc.setText(blocs.get(i[0]).getNom());
+        vitesseBloc.setText(blocs.get(i[0]).getVitesse() + " tr/min");
+        nomBlocSuivant.setText(String.valueOf(blocs.get(i[0] + 1).getNom()));
+        dureeBlocSuivant.setText(String.valueOf(blocs.get(i[0] + 1).getDuree()));
+        vitesseBlocSuivant.setText(String.valueOf(blocs.get(i[0] + 1).getVitesse()));
 
-            /*
-            nomBloc.setText(blocs.get(i).getNom());
-            vitesseBloc.setText(blocs.get(i).getVitesse());
+        MyCountDownTimer tempsRestant = new MyCountDownTimer(blocs.get(i[0]).getDuree() * 60000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                int minutes = ((int) millisUntilFinished / 1000) / 60;
+                int secondes = ((int) millisUntilFinished / 1000) % 60;
+                dureeBloc.setText(minutes + ":" + String.format("%02d", secondes));
+            }
 
-            nomBlocSuivant.setText(blocs.get(i + 1).getNom());
-            dureeBlocSuivant.setText(blocs.get(i + 1).getDuree());
-            vitesseBlocSuivant.setText(blocs.get(i + 1).getVitesse());
-             */
-        }
+            @Override
+            public void onFinish() {
+                if (i[0] < blocs.size()) {
+                    ++i[0];
+                    nomBloc.setText(blocs.get(i[0]).getNom());
+                    vitesseBloc.setText(blocs.get(i[0]).getVitesse() + " tr/min");
+                    nomBlocSuivant.setText(String.valueOf(blocs.get(i[0] + 1).getNom()));
+                    dureeBlocSuivant.setText(String.valueOf(blocs.get(i[0] + 1).getDuree()) + ":00");
+                    vitesseBlocSuivant.setText(String.valueOf(blocs.get(i[0] + 1).getVitesse()) + "tr/min");
+                    this.setMillisInFuture(blocs.get(i[0]).getDuree() * 60000); // here we change the millisInFuture of our timer
+                    this.start();
+                } else {
+
+                }
+            }
+        }.start();
+
     }
 }
