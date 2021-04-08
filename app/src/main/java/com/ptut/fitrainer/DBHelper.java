@@ -21,16 +21,16 @@ public class DBHelper extends SQLiteOpenHelper {
             "INSERT INTO utilisateur(pseudo, email, motDePasse, prenom, nom, dateNaissance, taille, poids, sexe, condition)" +
                     "VALUES('admin', 'admin@admin.com', 'admin', 'admin', 'istrateur', '01/01/1970', 180, 80, 'Homme', 'Excellent');";
     
-    public static final String SQL_CREATE_TRAININGS = 
+    public static final String SQL_CREATE_TRAININGS =
             "CREATE TABLE entrainement(id INTEGER PRIMARY KEY NOT NULL, " +
-                    "nom TEXT, temps INTEGER, vitesse INTEGER, resistance INTEGER, blocs TEXT);";
+                    "nom TEXT, vitesse INTEGER, resistance INTEGER, blocs TEXT);";
 
 
     public static final String[] SQL_FILL_TRAININGS = {
-            "INSERT INTO entrainement(nom, temps, vitesse, resistance, blocs)" +
-                    "VALUES('Countryside Ramble', 25, 2, 1, '2 3 4');",
-            "INSERT INTO entrainement(nom, temps, vitesse, resistance, blocs)" +
-                    "VALUES('Downhill Speed', 40, 3, 1, '2 3 5 3');"
+            "INSERT INTO entrainement(nom, vitesse, resistance, blocs)" +
+                    "VALUES('Countryside Ramble', 2, 1, '2 3 4');",
+            "INSERT INTO entrainement(nom, vitesse, resistance, blocs)" +
+                    "VALUES('Downhill Speed', 3, 1, '2 3 5 3');"
     };
 
 
@@ -42,11 +42,11 @@ public class DBHelper extends SQLiteOpenHelper {
             "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
                     "VALUES(1, 'Sprint', 5, 120, 85);",
             "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
-                    "VALUES(2, 'Echauffement', 10, 60, 30);",
+                    "VALUES(2, 'Echauffement', 1, 60, 30);",
             "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
-                    "VALUES(3, 'côte', 20, 50, 90);",
+                    "VALUES(3, 'côte', 2, 50, 90);",
             "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
-                    "VALUES(4, 'décrassage', 25, 70, 40);",
+                    "VALUES(4, 'décrassage', 2, 70, 40);",
             "INSERT INTO bloc(id, nom, duree, vitesse, intensite)" +
                     "VALUES(5, 'repos', 1, 30, 10);"
     };

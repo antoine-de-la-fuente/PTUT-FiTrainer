@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -16,8 +17,10 @@ public class OngoingTrainingActivity extends AppCompatActivity {
 
     private Entrainement entrainement;
     private ArrayList<Bloc> blocs;
-    private boolean etatTimer = true;
+    private boolean etatTimer = false;
     private long tempsRestant;
+    private long tempsTotal;
+    private int freqPedalage;
 
     private TextView nomBloc;
     private TextView dureeBloc;
@@ -38,6 +41,11 @@ public class OngoingTrainingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ongoing_training);
+
+        try {
+            this.getSupportActionBar().hide();
+        } catch (NullPointerException e) {
+        }
 
         nomBloc = (TextView) findViewById(R.id.modulenamebegining);
         dureeBloc = (TextView) findViewById(R.id.moduletimebegining);
@@ -69,10 +77,12 @@ public class OngoingTrainingActivity extends AppCompatActivity {
         sliderIntensite.setEnabled(false);
         exerciceFinal.setVisibility(View.INVISIBLE);
 
-        MyCountDownTimer countdown = new MyCountDownTimer(blocs.get(i[0]).getDuree() * 600, 200) {
+        MyCountDownTimer countdown = new MyCountDownTimer(blocs.get(i[0]).getDuree() * 60000, 200) {
             @Override
             public void onTick(long millisUntilFinished) {
                 tempsRestant = millisUntilFinished;
+                tempsTotal = (blocs.get(i[0]).getDuree() * 60000) - tempsRestant;
+                freqPedalage = (int) ((blocs.get(i[0]).getVitesse() * ((blocs.get(i[0]).getDuree() * 60000) - millisUntilFinished)) / (int) tempsTotal);
                 int minutes = ((int) millisUntilFinished / 1000) / 60;
                 int secondes = ((int) millisUntilFinished / 1000) % 60;
                 dureeBloc.setText(minutes + ":" + String.format("%02d", secondes));
@@ -81,25 +91,30 @@ public class OngoingTrainingActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 ++i[0];
-                nomBloc.setText(blocs.get(i[0]).getNom());
-                vitesseBloc.setText(blocs.get(i[0]).getVitesse() + " tr/min");
-                sliderIntensite.setProgress(blocs.get(i[0]).getIntensite());
-                if (i[0] < blocs.size() - 2) {
+                if (i[0] < blocs.size() - 1) {
+                    nomBloc.setText(blocs.get(i[0]).getNom());
+                    vitesseBloc.setText(blocs.get(i[0]).getVitesse() + " tr/min");
+                    sliderIntensite.setProgress(blocs.get(i[0]).getIntensite());
                     nomBlocSuivant.setText(String.valueOf(blocs.get(i[0] + 1).getNom()));
                     dureeBlocSuivant.setText(blocs.get(i[0] + 1).getDuree() + ":00");
                     vitesseBlocSuivant.setText(blocs.get(i[0] + 1).getVitesse() + " tr/min");
                     this.setMillisInFuture(blocs.get(i[0]).getDuree() * 600);
                     this.start();
-                } else if (i[0] == blocs.size() - 2) {
+                } else if (i[0] == blocs.size() - 1) {
+                    nomBloc.setText(blocs.get(i[0]).getNom());
+                    vitesseBloc.setText(blocs.get(i[0]).getVitesse() + " tr/min");
+                    sliderIntensite.setProgress(blocs.get(i[0]).getIntensite());
                     exerciceFinal.setVisibility(View.VISIBLE);
                     layoutProchainBloc.setVisibility(View.INVISIBLE);
-                    this.setMillisInFuture(blocs.get(i[0]).getDuree() * 600);
+                    this.setMillisInFuture(blocs.get(i[0]).getDuree() * 60000);
                     this.start();
-                } else if (i[0] == blocs.size() - 1) {
+                } else if (i[0] == blocs.size()) {
                     Intent intent = new Intent(OngoingTrainingActivity.this, FinishTrainingActivity.class);
                     intent.putExtra("fini", true);
                     intent.putExtra("entrainement", entrainement);
                     intent.putExtra("blocs", blocs);
+                    intent.putExtra("tempsTotal", tempsTotal);
+                    intent.putExtra("freqPedalage", freqPedalage);
                     startActivity(intent);
                     finish();
                 }
@@ -127,10 +142,13 @@ public class OngoingTrainingActivity extends AppCompatActivity {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                countdown.cancel();
                 Intent intent = new Intent(OngoingTrainingActivity.this, FinishTrainingActivity.class);
                 intent.putExtra("fini", false);
                 intent.putExtra("entrainement", entrainement);
                 intent.putExtra("blocs", blocs);
+                intent.putExtra("tempsTotal", tempsTotal);
+                intent.putExtra("freqPedalage", freqPedalage);
                 startActivity(intent);
                 finish();
             }

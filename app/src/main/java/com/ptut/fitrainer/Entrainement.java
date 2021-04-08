@@ -6,7 +6,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * Created by Antoine DE LA FUENTE on 4/7/21.
@@ -15,16 +14,14 @@ import java.util.Scanner;
 public class Entrainement implements Parcelable {
 
     private String nom;
-    private int temps;
     private int vitesse;
     private int resistance;
     private ArrayList<Bloc> blocs;
 
     private SQLiteDatabase db;
 
-    public Entrainement(String nom, int temps, int vitesse, int resistance, String listeIDs, SQLiteDatabase db) {
+    public Entrainement(String nom, int vitesse, int resistance, String listeIDs, SQLiteDatabase db) {
         this.nom = nom;
-        this.temps = temps;
         this.vitesse = vitesse;
         this.resistance = resistance;
         this.db = db;
@@ -34,7 +31,6 @@ public class Entrainement implements Parcelable {
 
     protected Entrainement(Parcel in) {
         nom = in.readString();
-        temps = in.readInt();
         vitesse = in.readInt();
         resistance = in.readInt();
     }
@@ -75,10 +71,6 @@ public class Entrainement implements Parcelable {
         return nom;
     }
 
-    public int getTemps() {
-        return temps;
-    }
-
     public int getVitesse() {
         return vitesse;
     }
@@ -99,7 +91,6 @@ public class Entrainement implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(nom);
-        dest.writeInt(temps);
         dest.writeInt(vitesse);
         dest.writeInt(resistance);
     }

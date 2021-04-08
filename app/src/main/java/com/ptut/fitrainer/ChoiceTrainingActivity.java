@@ -39,7 +39,6 @@ public class ChoiceTrainingActivity extends AppCompatActivity {
         if(curs.moveToFirst()) {
             do {
                 listeEntrainements.add(new Entrainement(curs.getString(curs.getColumnIndexOrThrow("nom")),
-                                                  curs.getInt   (curs.getColumnIndexOrThrow("temps")),
                                                   curs.getInt   (curs.getColumnIndexOrThrow("vitesse")),
                                                   curs.getInt   (curs.getColumnIndexOrThrow("resistance")),
                                                   curs.getString(curs.getColumnIndexOrThrow("blocs")), db));

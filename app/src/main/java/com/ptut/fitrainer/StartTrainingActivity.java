@@ -26,6 +26,11 @@ public class StartTrainingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_training);
 
+        try {
+            this.getSupportActionBar().hide();
+        } catch (NullPointerException e) {
+        }
+
         entrainement = getIntent().getParcelableExtra("entrainement");
         blocs = getIntent().getParcelableArrayListExtra("blocs");
 
